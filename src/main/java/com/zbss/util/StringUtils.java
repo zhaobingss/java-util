@@ -1,4 +1,4 @@
-package com.diandong.util;
+package com.zbss.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

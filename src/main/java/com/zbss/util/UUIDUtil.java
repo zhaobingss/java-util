@@ -1,4 +1,4 @@
-package com.diandong.util;
+package com.zbss.util;
 
 import java.util.UUID;
 

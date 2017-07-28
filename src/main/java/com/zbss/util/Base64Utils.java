@@ -2,15 +2,17 @@ package com.zbss.util;
 
 /**
  * Base64加解密 （可以变换字符的顺序实现自定义的Base64）
+ *
  * @author zhaobing
  * @Date 2017-03-31
  */
 public class Base64Utils {
-	
+
 	private final static String encodingChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-	
+
 	/**
 	 * 加密字符串
+	 *
 	 * @param source
 	 * @return
 	 */
@@ -26,17 +28,18 @@ public class Base64Utils {
 				target[i + 4 * group] = encodingChar.charAt(targetBytes[i]);
 			}
 		}
-		
+
 		int numPadBytes = sourceBytes.length - source.length();
-		for (int i = target.length - numPadBytes; i < target.length; i++){
+		for (int i = target.length - numPadBytes; i < target.length; i++) {
 			target[i] = '=';
 		}
-		
+
 		return new String(target);
 	}
 
 	/**
 	 * 解密字符串
+	 *
 	 * @param source 要解密的字符串
 	 * @return
 	 */
@@ -58,6 +61,7 @@ public class Base64Utils {
 
 	/**
 	 * padding字节
+	 *
 	 * @param source
 	 * @return
 	 */
@@ -71,6 +75,7 @@ public class Base64Utils {
 
 	/**
 	 * 将3个8位字节转换为4个6位字节
+	 *
 	 * @param source
 	 * @param sourceIndex
 	 * @param target
@@ -84,6 +89,7 @@ public class Base64Utils {
 
 	/**
 	 * 将4个6位字节转换为3个8位字节
+	 *
 	 * @param source
 	 * @param target
 	 * @param targetIndex

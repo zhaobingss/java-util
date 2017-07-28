@@ -320,7 +320,7 @@ public class HttpClientUtils {
 
 		// 请求头设置
 		if (headers != null) {
-			for (Map.Entry<String, Object> entry : headers.entrySet()) {
+			for (Entry<String, Object> entry : headers.entrySet()) {
 				request.setHeader(entry.getKey(), String.valueOf(entry.getValue()));
 			}
 		}
